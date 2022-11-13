@@ -1,9 +1,14 @@
+import Card from "../components/Card"
+import Banner from '../components/Banner'
 
 function Accueil() {
     return (
-        
-        <div><h1>Accueil Project 7</h1></div>
-        
+        <main className="main-accueil" >
+            <Banner />
+            <div className="accueil-container">
+                <Card />
+            </div>
+        </main>
     )
 }
 

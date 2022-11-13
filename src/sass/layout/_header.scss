@@ -1,6 +1,33 @@
-.header-link {
+@import '../utils/variables';
+
+.header {
     list-style-type: none;
-    color: #FF6060;
+    color: $primary;
     display: flex;
     justify-content: space-between;
+    margin: 0 100px 0 100px;
+    &-nav {
+        color: $primary;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        } 
+    }
+    &-link {
+        margin-right: 15px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 142.6%;
+        margin-top: 57px;
+    }  
+    &-logo {
+        width: 210px;
+        height: 68px;
+        margin: 40px 0 63px 0;
+    }
+    &-accueil {
+        margin-right: 57px;
+    }
 }
+
