@@ -5,6 +5,7 @@
 /.pnp
 .sass-cache/
 .pnp.js
+.env
 
 # testing
 /coverage
