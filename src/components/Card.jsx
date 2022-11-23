@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 
 
-function Card(cover, title) {
+function Card({cover, title, id}) {
     return (
-        <Link to='/logement'className="card-link">
+        <Link to= {{pathname: `/logement/${id}`}} className="card-link">
             <div className="card" >
             <img src={cover} alt="Logement" className="card-img"/>
             <p className="card-title">{title}</p>
@@ -14,8 +14,9 @@ function Card(cover, title) {
 }
 
 Card.propTypes = {
-    cover: PropTypes.object.isRequired,
+    cover: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   }
 
 

@@ -13,15 +13,16 @@ export function useFetch(url) {
             const response = await fetch(url)
             const data = await response.json()
             setData(data)
-        } catch (err) {
+          } catch (err) {
             console.log(err)
             setError(true)
-        } finally {
+          } finally {
             setLoading(false)
+          }
         }
-      }
-      fetchData()
-    }, [url])
+        fetchData()
+      }, [url])
+      console.log(data);
     return { data, isLoading, error }
   } 
 

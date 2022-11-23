@@ -17,7 +17,7 @@ const RootComponent = () => (
         <Routes>
           <Route exact path="/" element={<Accueil />} />
           <Route path="/apropos" element={<Apropos />} />
-          <Route path='/logement' element={<Logement />} />
+          <Route path='/logement/:id' element={<Logement />} />
           <Route path="/*" element={<Error />} />
         </Routes>
       </>

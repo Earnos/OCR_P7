@@ -5,8 +5,7 @@ import Banner from '../components/Banner'
 import PropTypes from "prop-types"
 
 function Accueil() {
-    const { data, isLoading, error } = useFetch("../data/data.json")
-    // const logementsList = data?.data
+    const { data, isLoading, error } = useFetch("data/data.json")
 
         if (isLoading) return <h1>Chargement...</h1>
 
@@ -16,11 +15,12 @@ function Accueil() {
             <main className="main-accueil" >
                 <Banner />
                 <div className="accueil-container">
-                {data.map(data => (
+                {data.map(items => (
                     <Card
-                    key={data?.id}
-                    cover={data?.cover}
-                    title={data?.title}
+                    key={items?.id}
+                    id={items?.id}
+                    cover={items?.cover}
+                    title={items?.title}
                     />
                 ))}
                </div>
@@ -29,7 +29,10 @@ function Accueil() {
 }
 
 Accueil.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    data: PropTypes.arrayOf(PropTypes.object),
+    id: PropTypes.number,
+    title: PropTypes.string,
+    cover: PropTypes.string,
 }
 
 export default Accueil
