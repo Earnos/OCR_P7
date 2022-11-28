@@ -30,7 +30,7 @@ function Accueil() {
 
 Accueil.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     cover: PropTypes.string,
 }

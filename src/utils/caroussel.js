@@ -1,11 +1,31 @@
+// import { useState } from 'react'
+
 export function CarousselDisplay(pictures) {
-  return <img src={pictures[0]} alt="logement caroussel" />
+  // const [currentIndex, SetIndex] = useState(0)
+
+  return <img src={pictures} alt="logement caroussel" />
 }
 
 export function NextArrow() {
-  return <p>Next</p>
+  return (
+    <button
+      onClick={(pictures) => {
+        pictures = +1
+      }}
+    >
+      Next
+    </button>
+  )
 }
 
 export function PreviousArrow() {
-  return <p>Previous</p>
+  return (
+    <button
+      onClick={(pictures) => {
+        pictures = +1
+      }}
+    >
+      Previous
+    </button>
+  )
 }
