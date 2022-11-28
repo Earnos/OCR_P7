@@ -1,20 +1,29 @@
 import PropTypes from 'prop-types'
-import { NextArrow, PreviousArrow } from '../utils/caroussel'
+import { useState } from 'react'
 
 
-function Caroussel({pictures, id}) {
-    pictures.map( img => {
-    return   (
-        
+
+function Caroussel({pictures}) {
+    const [index, setIndex] = useState(0)
+
+    function next() {
+        setIndex (index + 1)
+    }
+
+    function previous() {
+        setIndex (index - 1)
+    }
+
+    return (
         <div className="logement-caroussel" >
-            <PreviousArrow />
-            <img  key={id} src={pictures} alt="logement caroussel" className="logement-pictures" />
-            <NextArrow />
-            {console.log(pictures)}
+            <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
+            <button onClick={previous} >Previous</button>
+            <button  onClick={next}>Next</button>
         </div>
-         
-    )})
-}
+    )}
+
+
+
 
 Caroussel.propTypes = {
     pictures: PropTypes.string,
