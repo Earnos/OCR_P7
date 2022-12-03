@@ -1,0 +1,20 @@
+.caroussel {
+    &-btn {
+        position: absolute;
+        background: inherit;
+        border: inherit;
+        z-index: 10;
+        margin-left: 1em;
+        padding: 5px;
+        align-self: center;
+    }
+    &-btn1 {
+        height: auto;
+        & > img {
+            background-color: transparent;
+        }
+    }
+    &-btn2 {
+        right: 8%;
+    }
+}

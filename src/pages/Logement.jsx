@@ -27,7 +27,7 @@ function Logement() {
 
 
 Logement.propTypes = {
-    pictures: PropTypes.string,
+    pictures: PropTypes.arrayOf(PropTypes.string),
     id: PropTypes.string,
 }
 
