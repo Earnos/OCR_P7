@@ -15,13 +15,18 @@ function Logement() {
     const logement = data.find(element => element.id === id)
     console.log(logement);
     return (
-        <>
-        <div className="logement-container">
+        <main className="logement-main" >
+            <div className="logement-container">
                 <Caroussel
                 pictures={logement.pictures}
                 />
-        </div>
-        </>    
+            </div>
+            <div className="logement-info1" >
+                <h1 className="logement-info1-title" >{logement.title}</h1>
+                <p className="logement-info1-location" >{logement.location}</p>
+                <span className="logement-info1-tags" >{logement.tags}</span>
+            </div>
+        </main>    
     )
 }
 
