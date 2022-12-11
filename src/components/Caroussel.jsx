@@ -24,7 +24,7 @@ function Caroussel({pictures}) {
         <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
         </div> 
         )
-    } else {
+    } 
     return (
         <div className="logement-caroussel" >
             <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
@@ -32,7 +32,7 @@ function Caroussel({pictures}) {
             <button  onClick={next}   className="caroussel-btn caroussel-btn2" type="button"><img src={rightArrow} alt="" /></button>
             <span className='length-counter' ><p className='img-length-display' >{index + 1}/{pictures.length}</p></span>
         </div>
-    )}
+    )
 }
 
 

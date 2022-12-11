@@ -1,5 +1,14 @@
+import Banner from "../components/Banner"
+
 function Apropos() {
-    return <p>À propos</p>
+    return (
+        <main className="propos-container">
+            <div className="propos-banner" >
+                <Banner />
+            </div>
+        </main>
+        
+    )
 }
 
 export default Apropos
