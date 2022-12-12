@@ -3,6 +3,7 @@ import { useFetch } from "../utils/hooks/useFetch"
 import Card from "../components/Card"
 import Banner from '../components/Banner'
 import PropTypes from "prop-types"
+import banner from '../assets/banner.png'
 
 function Accueil() {
     const { data, isLoading, error } = useFetch("data/data.json")
@@ -13,7 +14,7 @@ function Accueil() {
 
         return (
             <main className="main-accueil" >
-                <Banner />
+                <Banner banner={banner} text="Chez vous, partout et ailleurs" />
                 <div className="accueil-container">
                 {data.map(items => (
                     <Card

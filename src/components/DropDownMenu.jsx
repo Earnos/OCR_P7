@@ -1,4 +1,3 @@
-import { useState } from "react"
 import bottomArrow from '../assets/bottomArrow.svg'
 import PropTypes from 'prop-types'
 

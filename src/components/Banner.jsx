@@ -1,10 +1,9 @@
-import banner from '../assets/banner.png'
 
-function Banner() {
+function Banner({banner, text}) {
     return (
     <div className='bannerContainer'>   
     <img src={banner} alt="Bannière page d'accueil" className='banner' />
-    <p className='banner-text' >Chez vous, partout et ailleurs</p>
+    {text ? <p className='banner-text' >{text}</p> : null }
     </div> 
     )
 }

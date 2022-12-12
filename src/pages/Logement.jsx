@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom"
 import Caroussel from "../components/Caroussel"
 import PropTypes  from "prop-types"
 import { useFetch } from "../utils/hooks/useFetch"
-import emptyStar from "../assets/emptyStar.svg"
-import star from "../assets/star.svg"
+// import emptyStar from "../assets/emptyStar.svg"
+// import star from "../assets/star.svg"
 import Rating from "../components/Rating"
 import Tags from "../components/Tags"
 import DropDownMenu from "../components/DropDownMenu"
@@ -30,9 +30,9 @@ function Logement() {
                 <div className="logement-info1" >
                     <h1 className="logement-info1-title" >{logement.title}</h1>
                     <p className="logement-info1-location" >{logement.location}</p>
-                    {logement.tags.map(tag => (
+                    
                     <Tags tags={logement.tags} />
-                    ))}
+                    
                 </div>
                 <div className="logement-info2">
                     <div className="logement-info2-profil">
