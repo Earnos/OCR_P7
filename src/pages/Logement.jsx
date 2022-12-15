@@ -11,14 +11,14 @@ import DropDownMenu from "../components/DropDownMenu"
 function Logement() {
     const { id } = useParams()
     const { data, isLoading, error } = useFetch("../../data/data.json")
-    console.log(data);
-    if (isLoading) return <h1>Chargement...</h1>
+    
+    if (isLoading) return <div className="spinner-container" ><div className="spinonediv-1"></div></div>
     
     if (error) console.log(error)
     
     const logement = data.find(element => element.id === id)
-    console.log(logement);
-    console.log(logement.rating);
+    const equips = logement.equipments.map((item, index) => (<ul  key={index} className="dropdown-text-liste" ><li>{item}</li></ul>))
+
     return (
         <main className="logement-main" >
             <div className="logement-container">
@@ -44,8 +44,9 @@ function Logement() {
                     </div>
                 </div>
             </div>
-            <div>
-                <DropDownMenu  description={logement.description} />
+            <div className="drop-container-btn" >
+                <DropDownMenu text={logement.description}  title='Description' />
+                <DropDownMenu text={equips}  title='Equipements' />
             </div>
         </main>    
     )
@@ -53,8 +54,10 @@ function Logement() {
 
 
 Logement.propTypes = {
-    pictures: PropTypes.arrayOf(PropTypes.string),
+    pictures: PropTypes.arrayOf(PropTypes.string.isRequired),
     id: PropTypes.string,
+    description: PropTypes.string,
+    equipments: PropTypes.arrayOf(PropTypes.string.isRequired),
 }
 
 export default Logement

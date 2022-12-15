@@ -8,7 +8,7 @@ import banner from '../assets/banner.png'
 function Accueil() {
     const { data, isLoading, error } = useFetch("data/data.json")
 
-        if (isLoading) return <h1>Chargement...</h1>
+        if (isLoading) return <div className="spinner-container" ><div className="spinonediv-1"></div></div>
 
         if (error) console.log(error)
 

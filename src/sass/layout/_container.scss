@@ -16,6 +16,14 @@
 
 }
 
+.spinner-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
 // Page logements
 
 .logement {
@@ -33,7 +41,7 @@
     }
     &-info1 {
         margin: 1.5em 0 1.5em 7%;
-        width: 40%;
+        max-width: 70%;
         &-title {
             color: $primary;
             font-weight: 500;
@@ -82,11 +90,6 @@
             margin: 1.5em 0 0 auto;
         }
     }
-}
-
-.drop-container {
-    display: flex;
-    margin-right: 7%;
 }
 
 // Page à Propos

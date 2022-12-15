@@ -9,13 +9,12 @@ function Rating({rating}) {
     return (
         <>
             {stars.map((star, index) => {
-                console.log(index, rating);
                 if (index < rating) {
                     return (
-                        <img src={starFill} alt="note étoile" />
+                        <img  key={index} src={starFill} alt="note étoile" />
                     )
                 }
-                return  <img src={emptyStar} alt="note étoile" />
+                return  <img  key={index} src={emptyStar} alt="note étoile" />
             })}
         </>
         )  

@@ -1,35 +1,33 @@
-import bottomArrow from '../assets/bottomArrow.svg'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
-
-function dropDown({description}) {
+import bottomArrow from '../assets/bottomArrow.svg'
+import upArrow from '../assets/upArrow.svg'
+      
     
-    return (
-        <div>
-        <p>{description}</p>
-        </div>
-        )
-    }
-    
-    
-function DropDownMenu() {
-    //const [menu, setMenu] = useState(false)
+function DropDownMenu({text, title, index}) {
+    const [menu, setMenu] = useState(false)
+    const toggleMenu = () => { setMenu(!menu) } 
 
     return (
-        <div className="drop-container" >
-            <button  className="drop-btn">
-                <span>Description</span>
-                <span onClick={dropDown}><img src={bottomArrow} alt="fléche de description" /></span>
-            </button>
-            <button  className="drop-btn">
-                <span>Equipements</span>
-                <span onClick={dropDown}><img src={bottomArrow} alt="fléche de description" /></span>
-            </button>
-        </div>
+      
+            <div className='dropdown-container'>
+                <button key={index} className="drop-btn">
+                    <span>{title}</span>
+                    <span onClick={toggleMenu}><img src={menu === true ? bottomArrow : upArrow} alt="flèche de description" /></span>
+                </button>
+                {menu === true ? <div className='dropdown-text'><span>{text}</span></div> : false}
+                
+            </div>
+     
     )
 }
 
 DropDownMenu.propTypes = {
-    description: PropTypes.string
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]),
+    title: PropTypes.string
 }
 
 
