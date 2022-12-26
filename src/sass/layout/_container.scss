@@ -31,17 +31,15 @@
         height: 100vh;
     }
     &-container {
-    
-    margin: 0 7% 0 7%;
-    display: flex;
-    justify-content: center;
+        display: flex;
+    margin: 0 5% 0 5%;
     }
     &-infos-container {
         display: flex;
+        margin: 2% 5% 3% 5%;
     }
     &-info1 {
-        margin: 1.5em 0 1.5em 7%;
-        max-width: 70%;
+        
         &-title {
             color: $primary;
             font-weight: 500;
@@ -67,8 +65,8 @@
         }
     }
     &-info2 {
-        margin: 24px 7% 24px auto;
-        width: auto;
+        right: 5%;
+        position: absolute;
         &-profil {
             display: flex;
             &-image {
@@ -95,5 +93,5 @@
 // Page à Propos
 
 .propos-container {
-    height: 100vh;
+    height: 70%;
 }

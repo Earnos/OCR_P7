@@ -17,7 +17,7 @@ function Logement() {
     if (error) console.log(error)
     
     const logement = data.find(element => element.id === id)
-    const equips = logement.equipments.map((item, index) => (<ul  key={index} className="dropdown-text-liste" ><li>{item}</li></ul>))
+    const equips = logement.equipments.map((item, index) => (<ul  key={'equip' + index} className="dropdown-text-liste" ><li>{item}</li></ul>))
 
     return (
         <main className="logement-main" >

@@ -10,7 +10,7 @@ function DropDownMenu({text, title, index}) {
 
     return (
       
-            <div className='dropdown-container'>
+            <div className='dropdown-container dropdown-component-div'>
                 <button key={index} className="drop-btn">
                     <span>{title}</span>
                     <span onClick={toggleMenu}><img src={menu === true ? bottomArrow : upArrow} alt="flèche de description" /></span>
