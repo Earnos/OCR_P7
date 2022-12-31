@@ -1,0 +1,112 @@
+// All pages
+@include mobile {
+    // Header
+    .header {
+        height: 112px;
+        margin-top: -9px;
+        &-logo {
+        width: 145px;
+        height: 47px;
+        }
+        &-link {
+        margin-right: 0;
+        font-size: 1em;
+        }
+    }
+    .header-nav.header-accueil {
+        margin-right: 1.1em;
+    }
+    // footer
+    .footer {
+        position: absolute;
+        &-rights {
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
+// page Accueil
+ @include mobile {
+
+    // Banner
+    .banner-accueil-mobile {
+        justify-content: left;
+    }
+    .banner {
+        &-img-accueil-mobile {
+            border-radius: 10px;
+            height: 111px;
+        }
+        &-text-accueil-mobile {
+        overflow-wrap: break-word;
+        inline-size: 80%;
+        font-size: 1.6em;
+        line-height: 100%;
+        margin: 3%;
+         }
+    }
+
+    // main
+    .accueil-container {
+        background-color: inherit;
+        padding: inherit;
+        margin-top: 8%;
+    }
+    .card {
+        &-link {
+        margin-bottom: 8%;
+        }
+        &-title {
+            width: 60%;
+            font-size: 16px;
+        }
+    }
+
+     }
+
+
+// Page à propos
+@include mobile {
+    // banner
+    // main 
+    .propos-container {
+        height: 100%;
+    }
+    .dropdown-apropos-container {
+        margin: 3% 5%;
+    }
+    .drop-btn {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+        border-radius: 5px;
+        height: 30px;
+        padding: 5px 10px;
+        & > span > img {
+            padding-top: 0;
+            height: 20px;
+            width: 14px;
+        }
+    }
+    .dropdown-text {
+        font-size: 14px;
+    }
+}
+
+// Page error 404
+@include mobile {
+    .error {
+        &-number {
+            font-size: 6em;
+        }
+        &-text {
+            font-size: 1.125em;
+        }
+        &-link-return {
+            font-size: 0.875em;
+        }
+    }
+}

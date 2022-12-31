@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
 @import "./layout/header";
@@ -11,6 +12,10 @@
 @import "./Components/loader";
 @import "./Components/caroussel";
 @import "./Components/dropDownMenu";
+@import "./Media-query/mobile";
+@import "./Media-query/tablet";
+@import "./Media-query/desktop";
+
 
 
 

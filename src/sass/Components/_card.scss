@@ -6,6 +6,7 @@
     color: #f6f6f6;
     border-radius: 10px; 
     box-shadow: inset 0px -80px 36px -21px rgba(66,66,66,0.80);
+    position: relative;
     &-link {
         text-decoration: none;
         border-radius: 10px;
@@ -14,14 +15,15 @@
         z-index: 1;
     }
     &-title {
-        width: 20%;
         padding: 0.8em;
-        padding-top: 260px;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 142.6%;
         position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 90%;
     }
     &-img {
         object-fit: cover;
@@ -29,4 +31,4 @@
         width: 100%;
         z-index: -2;
     }
-}
+}                

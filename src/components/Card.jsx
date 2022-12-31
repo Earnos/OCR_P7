@@ -7,7 +7,7 @@ function Card({cover, title, id}) {
         <Link to= {{pathname: `/logement/${id}`}} className="card-link">
             <div className="card" >
             <img src={cover} alt="Logement" className="card-img"/>
-            <p className="card-title">{title}</p>
+            <div className="card-title"><p>{title}</p></div>
             </div>
         </Link>
     )
