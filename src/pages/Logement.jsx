@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom"
 import Caroussel from "../components/Caroussel"
 import PropTypes  from "prop-types"
 import { useFetch } from "../utils/hooks/useFetch"
-// import emptyStar from "../assets/emptyStar.svg"
-// import star from "../assets/star.svg"
 import Rating from "../components/Rating"
 import Tags from "../components/Tags"
 import DropDownMenu from "../components/DropDownMenu"
+import Error from "../components/Error"
 
 function Logement() {
     const { id } = useParams()
@@ -17,6 +16,11 @@ function Logement() {
     if (error) console.log(error)
     
     const logement = data.find(element => element.id === id)
+
+    if (!logement) {
+        return <Error />
+    }
+
     const equips = logement.equipments.map((item, index) => (<ul  key={'equip' + index} className="dropdown-text-liste" ><li>{item}</li></ul>))
 
     return (
