@@ -4,7 +4,9 @@
     margin: 0;
 }
 
-
+#root {
+    flex-grow: 1;
+}
 
 html, body {
     font-family: 'Monserrat', sans-serif;

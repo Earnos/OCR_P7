@@ -132,18 +132,26 @@
         &-pictures {
             border-radius: 10px;
         }
-        &-info1-title {
-            font-size: 24px;
-        }
-        &-info1-location {
-            font-size: 16px;
+        &-info1 {
+            &-title {
+                font-size: 24px;
+            }
+            &-location {
+                font-size: 16px;
+            }
+            &-tags {
+                border-radius: 5px;
+                padding: 3px 17px;
+                margin-right: 0.5em;
+                margin-top: 0.5em;
+            }
         }
         &-info2 {
-        position: inherit;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        margin: 8% 0;
+            position: inherit;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 8% 0;
         }
         &-info2-profil {
             & > img {
