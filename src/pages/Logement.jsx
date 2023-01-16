@@ -21,8 +21,6 @@ function Logement() {
         return <Error />
     }
 
-    const equips = logement.equipments.map((item, index) => (<ul  key={'equip' + index} className="dropdown-text-liste" ><li>{item}</li></ul>))
-
     return (
         <main className="logement-main" >
             <div className="logement-container">
@@ -49,8 +47,12 @@ function Logement() {
                 </div>
             </div>
             <div className="drop-container-btn" >
-                <DropDownMenu text={logement.description}  title='Description' />
-                <DropDownMenu text={equips}  title='Equipements' />
+                <DropDownMenu title='Description' >{logement.description}</DropDownMenu>
+                <DropDownMenu title='Equipements'>
+                    <ul className="dropdown-text-liste" >
+                        {logement.equipments.map((item, index) => (<li key={index} >{item}</li>))}
+                    </ul>
+                </DropDownMenu>
             </div>
         </main>    
     )
@@ -59,8 +61,7 @@ function Logement() {
 
 Logement.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string.isRequired),
-    id: PropTypes.string,
-    description: PropTypes.string,
+    id: PropTypes.arrayOf(PropTypes.string.isRequired, PropTypes.number.isRequired),
     equipments: PropTypes.arrayOf(PropTypes.string.isRequired),
 }
 

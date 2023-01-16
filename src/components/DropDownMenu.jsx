@@ -4,30 +4,26 @@ import bottomArrow from '../assets/bottomArrow.svg'
 import upArrow from '../assets/upArrow.svg'
       
     
-function DropDownMenu({text, title, index}) {
+function DropDownMenu(props) {
     const [menu, setMenu] = useState(false)
     const toggleMenu = () => { setMenu(!menu) } 
 
     return (
       
             <div className='dropdown-container dropdown-component-div'>
-                <button key={index} className="drop-btn">
-                    <span>{title}</span>
+                <button key={props.index} className="drop-btn">
+                    <span>{props.title}</span>
                     <span onClick={toggleMenu}><img src={menu === true ? bottomArrow : upArrow} alt="flèche de description" /></span>
                 </button>
-                {menu === true ? <div className='dropdown-text'><span>{text}</span></div> : false}
-                
+                {menu === true ? <div className='dropdown-text'><span>{props.children}</span></div> : false}
             </div>
      
     )
 }
 
 DropDownMenu.propTypes = {
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array
-    ]),
-    title: PropTypes.string
+    title: PropTypes.string,
+    index: PropTypes.arrayOf(PropTypes.string, PropTypes.number)
 }
 
 

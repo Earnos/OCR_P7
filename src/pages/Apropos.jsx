@@ -1,6 +1,7 @@
+import PropTypes  from "prop-types"
+import { useFetch } from "../utils/hooks/useFetch"
 import Banner from "../components/Banner"
 import banner from "../assets/bannerPropos.png"
-import { useFetch } from "../utils/hooks/useFetch"
 import DropDownMenu from "../components/DropDownMenu"
 
 function Apropos() {
@@ -17,7 +18,9 @@ function Apropos() {
             <div className="dropdown-apropos-container">
                 {
                 data.map((item, index) => (
-                    <DropDownMenu key={"drop" + index} title={item?.title} text={item?.content} />
+                    <DropDownMenu key={"drop" + index} title={item?.title} >
+                        {item.content}
+                    </DropDownMenu>
                 ))
                 }
             </div>
@@ -25,5 +28,12 @@ function Apropos() {
         
     )
 }
+
+Apropos.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object.isRequired),
+    title: PropTypes.string,
+    content: PropTypes.string
+}
+
 
 export default Apropos
