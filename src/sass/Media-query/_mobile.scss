@@ -19,7 +19,7 @@
     // footer
     .footer {
         position: absolute;
-        &-rights {
+            &-rights {
             font-size: 12px;
         }
     }
@@ -32,32 +32,32 @@
  @include mobile {
 
     // Banner
-    .banner-accueil-mobile {
-        justify-content: left;
-    }
     .banner {
-        &-img-accueil-mobile {
+        &-accueil-mobile {
+            & .bannerContainer > img{
             border-radius: 10px;
             height: 111px;
         }
-        &-text-accueil-mobile {
-        overflow-wrap: break-word;
-        inline-size: 80%;
-        font-size: 1.6em;
-        line-height: 100%;
-        margin: 3%;
-         }
     }
-
+        &-text-accueil-mobile {
+            overflow-wrap: break-word;
+            inline-size: 80%;
+            font-size: 1.6em;
+            line-height: 100%;
+            margin: 3%;
+        }
+    }
     // main
     .accueil-container {
+        display: flex;
+        justify-content: center;
         background-color: inherit;
         padding: inherit;
         margin-top: 8%;
     }
     .card {
         &-link {
-        margin-bottom: 8%;
+            margin-bottom: 8%;
         }
         &-title {
             width: 60%;
@@ -65,18 +65,36 @@
         }
     }
 
-     }
+}
 
 
 // Page à propos
 @include mobile {
     // banner
+    #propos-banner {
+        & .bannerContainer {
+            background: center / contain no-repeat url("../../assets/apropos-mobile-banner.jpg");
+            background-size: cover;
+            z-index: 100;
+            border-radius: 10px;
+            & > img {
+                border-radius: 10px;
+                height: 200px;
+                z-index: -100;
+            }
+
+        } 
+
+    } 
+
     // main 
-    .propos-container {
+    .propos {
+        &-container {
         height: 100%;
+        }
     }
     .dropdown-apropos-container {
-        margin: 3% 5%;
+        margin: 5% 5%;
     }
     .drop-btn {
         font-weight: 500;
@@ -96,6 +114,81 @@
     }
 }
 
+// Page logement 
+@include mobile {
+    .logement-infos-container {
+        display: block;
+    }
+    .logement {
+        &-main {
+            height: 100%;
+        }
+        &-container {
+            height: 280px;
+        }
+        &-caroussel {
+            height: 100%;
+        }
+        &-pictures {
+            border-radius: 10px;
+        }
+        &-info1-title {
+            font-size: 24px;
+        }
+        &-info1-location {
+            font-size: 16px;
+        }
+        &-info2 {
+        position: inherit;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 8% 0;
+        }
+        &-info2-profil {
+            & > img {
+                height: 45px;
+                width: 45px;
+            }
+            & > p {
+                font-size: 16px;
+                margin: 10px 10px 0 0;
+            }
+        }
+        &-info2-stars {
+            margin: 7px 0 0 87px;
+            height: 22px;
+            width: 22px;
+        }
+    }
+    .drop {
+        &-container-btn {
+        display: block;
+            & > div {
+            width: 100%;
+            }
+        }
+    }
+    .dropdown-text {
+        padding: 1em 1em 1em 1em;
+        & > span > ul > li {
+            font-size: 14px;
+        }
+
+    }
+    .caroussel-btn {
+        margin-left: 0.3em;
+        & > img {
+        width: 24px;
+        height: 42px;
+    } 
+    }
+    .img-length-display {
+        display: none;
+    }
+}
+
+
 // Page error 404
 @include mobile {
     .error {
@@ -104,6 +197,7 @@
         }
         &-text {
             font-size: 1.125em;
+            margin: 0 4% 5em 4%;
         }
         &-link-return {
             font-size: 0.875em;

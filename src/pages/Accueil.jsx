@@ -14,7 +14,9 @@ function Accueil() {
 
         return (
             <main className="main-accueil" >
-                <Banner banner={banner} text="Chez vous, partout et ailleurs" />
+                <div className="banner-accueil-mobile" >
+                    <Banner banner={banner} text="Chez vous, partout et ailleurs" />
+                </div>
                 <div className="accueil-container">
                 {data.map(items => (
                     <Card

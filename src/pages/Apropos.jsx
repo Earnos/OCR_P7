@@ -11,7 +11,7 @@ function Apropos() {
     
     return (
         <main className="propos-container">
-            <div className="propos-banner" >
+            <div id="propos-banner" >
                 <Banner banner={banner} />
             </div>
             <div className="dropdown-apropos-container">

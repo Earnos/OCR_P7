@@ -2,7 +2,7 @@
 .card {  
     display: flex;
     height: 340px;
-    width: 340px;
+    width: 338px;
     color: #f6f6f6;
     border-radius: 10px; 
     box-shadow: inset 0px -80px 36px -21px rgba(66,66,66,0.80);
@@ -11,7 +11,7 @@
         text-decoration: none;
         border-radius: 10px;
         height: 100%;
-        margin-bottom: 3%;
+        margin-bottom: 4%;
         z-index: 1;
     }
     &-title {
@@ -21,7 +21,7 @@
         font-size: 18px;
         line-height: 142.6%;
         position: absolute;
-        bottom: 8px;
+        margin-top: 240px;
         left: 0;
         width: 90%;
     }
