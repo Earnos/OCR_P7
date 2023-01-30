@@ -11,6 +11,7 @@
         &-link {
         margin-right: 0;
         font-size: 1em;
+        text-transform: uppercase;
         }
     }
     .header-nav.header-accueil {
@@ -210,5 +211,16 @@
         &-link-return {
             font-size: 0.875em;
         }
+    }
+}
+
+// mobile card small size -400px
+
+@media (max-width: 399px) {
+    .card {
+        width: 98%;
+    }
+    .header-link {
+        font-size: 0.75em;
     }
 }

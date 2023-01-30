@@ -20,19 +20,19 @@ function Caroussel({pictures}) {
     } 
     if (pictures.length === 1) {
         return (
-        <div className="logement-caroussel" >
-        <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
-        </div> 
+            <div className="logement-caroussel" >
+                <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
+            </div> 
         )
     } 
-    return (
-        <div className="logement-caroussel" >
-            <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
-            <button onClick={previous}  className="caroussel-btn caroussel-btn1" type="button"><img src={leftArrow} alt="" /></button>
-            <button  onClick={next}   className="caroussel-btn caroussel-btn2" type="button"><img src={rightArrow} alt="" /></button>
-            <span className='length-counter' ><p className='img-length-display' >{index + 1}/{pictures.length}</p></span>
-        </div>
-    )
+        return (
+            <div className="logement-caroussel" >
+                <img src={pictures[index]} alt="logement caroussel" className="logement-pictures" />
+                <button onClick={previous}  className="caroussel-btn caroussel-btn1" type="button"><img src={leftArrow} alt="" /></button>
+                <button  onClick={next}   className="caroussel-btn caroussel-btn2" type="button"><img src={rightArrow} alt="" /></button>
+                <span className='length-counter' ><p className='img-length-display' >{index + 1}/{pictures.length}</p></span>
+            </div>
+        )
 }
 
 

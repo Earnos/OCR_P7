@@ -23,37 +23,37 @@ function Logement() {
 
     return (
         <main className="logement-main" >
-            <div className="logement-container">
+            <section className="logement-container">
                 <Caroussel
                 pictures={logement.pictures}
                 />
-            </div>
-            <div className="logement-infos-container">
-                <div className="logement-info1" >
+            </section>
+            <section className="logement-infos-container">
+                <article className="logement-info1" >
                     <h1 className="logement-info1-title" >{logement.title}</h1>
-                    <p className="logement-info1-location" >{logement.location}</p>
+                    <address className="logement-info1-location" >{logement.location}</address>
                     
                     <Tags tags={logement.tags} />
                     
-                </div>
-                <div className="logement-info2">
-                    <div className="logement-info2-profil">
+                </article>
+                <article className="logement-info2">
+                    <section className="logement-info2-profil">
                         <p className="logement-info2-name" >{logement.host.name}</p>
                         <img src={logement.host.picture} alt="profil" className="logement-info2-profil-image"/>
-                    </div>
-                    <div className="logement-info2-stars">
+                    </section>
+                    <section className="logement-info2-stars">
                         <Rating rating={logement.rating} />
-                    </div>
-                </div>
-            </div>
-            <div className="drop-container-btn" >
+                    </section>
+                </article>
+            </section>
+            <section className="drop-container-btn" >
                 <DropDownMenu title='Description' >{logement.description}</DropDownMenu>
                 <DropDownMenu title='Equipements'>
                     <ul className="dropdown-text-liste" >
                         {logement.equipments.map((item, index) => (<li key={index} >{item}</li>))}
                     </ul>
                 </DropDownMenu>
-            </div>
+            </section>
         </main>    
     )
 }

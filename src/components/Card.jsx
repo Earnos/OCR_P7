@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 function Card({cover, title, id}) {
     return (
         <Link to= {{pathname: `/logement/${id}`}} className="card-link">
-            <div className="card" >
-            <img src={cover} alt="Logement" className="card-img"/>
-            <div className="card-title"><p>{title}</p></div>
-            </div>
+            <article className="card" >
+                <img src={cover} alt="Logement" className="card-img"/>
+                <span className="card-title"><p>{title}</p></span>
+            </article>
         </Link>
     )
 }

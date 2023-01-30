@@ -14,10 +14,10 @@ function Accueil() {
 
         return (
             <main className="main-accueil" >
-                <div className="banner-accueil-mobile" >
+                <section className="banner-accueil-mobile" >
                     <Banner banner={banner} text="Chez vous, partout et ailleurs" />
-                </div>
-                <div className="accueil-container">
+                </section>
+                <section className="accueil-container">
                 {data.map(items => (
                     <Card
                     key={items?.id}
@@ -26,7 +26,7 @@ function Accueil() {
                     title={items?.title}
                     />
                 ))}
-               </div>
+               </section>
             </main>
     )
 }

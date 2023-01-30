@@ -12,10 +12,10 @@ function Apropos() {
     
     return (
         <main className="propos-container">
-            <div id="propos-banner" >
+            <section id="propos-banner" >
                 <Banner banner={banner} />
-            </div>
-            <div className="dropdown-apropos-container">
+            </section>
+            <section className="dropdown-apropos-container">
                 {
                 data.map((item, index) => (
                     <DropDownMenu key={"drop" + index} title={item?.title} >
@@ -23,7 +23,7 @@ function Apropos() {
                     </DropDownMenu>
                 ))
                 }
-            </div>
+            </section>
         </main>
         
     )
